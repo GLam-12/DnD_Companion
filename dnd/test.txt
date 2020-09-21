@@ -5,3 +5,4 @@ Here's the conflict
 
 changed on both
 
+adding some text
