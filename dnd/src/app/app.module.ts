@@ -19,6 +19,14 @@ import { CharactersComponent } from './characters/characters.component';
 import { MonstersListComponent } from './monsters-list/monsters-list.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
 import { SingleCampaignInfoComponent } from './single-campaign-info/single-campaign-info.component';
+import { CharPageComponent } from './char-page/char-page.component';
+import { CampPageComponent } from './camp-page/camp-page.component';
+import { CampFormPageComponent } from './camp-form-page/camp-form-page.component';
+import { MonsterFormPageComponent } from './monster-form-page/monster-form-page.component';
+import { CharFormPageComponent } from './char-form-page/char-form-page.component';
+import { DmPageComponent } from './dm-page/dm-page.component';
+import { LoginRegPageComponent } from './login-reg-page/login-reg-page.component';
+import { PlayerPageComponent } from './player-page/player-page.component';
 import { CharInfoComponent } from './char-info/char-info.component';
 
 
@@ -38,6 +46,14 @@ import { CharInfoComponent } from './char-info/char-info.component';
     MonstersListComponent,
     CampaignListComponent,
     SingleCampaignInfoComponent,
+    CharPageComponent,
+    CampPageComponent,
+    CampFormPageComponent,
+    MonsterFormPageComponent,
+    CharFormPageComponent,
+    DmPageComponent,
+    LoginRegPageComponent,
+    PlayerPageComponent,
     CharInfoComponent,
   ],
   imports: [
