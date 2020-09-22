@@ -10,14 +10,24 @@ import { RegistrationComponent } from './registration/registration.component';
 import { NewCharComponent } from './new-char/new-char.component';
 
 import { MonsterFormComponent } from './monster-form/monster-form.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { CampaignFormComponent } from './campaign-form/campaign-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
     RegistrationComponent,
+
+
     NewCharComponent,
-    MonsterFormComponent
+
+    MonsterFormComponent,
+
+    NavigationComponent,
+
+    CampaignFormComponent,
 
   ],
   imports: [
