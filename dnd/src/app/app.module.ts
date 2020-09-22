@@ -17,18 +17,11 @@ import { CampaignFormComponent } from './campaign-form/campaign-form.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     RegistrationComponent,
-
-
     NewCharComponent,
-
     MonsterFormComponent,
-
     NavigationComponent,
-
     CampaignFormComponent,
-
   ],
   imports: [
     BrowserModule,
