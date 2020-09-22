@@ -27,6 +27,7 @@ import { CharFormPageComponent } from './char-form-page/char-form-page.component
 import { DmPageComponent } from './dm-page/dm-page.component';
 import { LoginRegPageComponent } from './login-reg-page/login-reg-page.component';
 import { PlayerPageComponent } from './player-page/player-page.component';
+import { CharInfoComponent } from './char-info/char-info.component';
 
 
 
@@ -53,6 +54,7 @@ import { PlayerPageComponent } from './player-page/player-page.component';
     DmPageComponent,
     LoginRegPageComponent,
     PlayerPageComponent,
+    CharInfoComponent,
   ],
   imports: [
     BrowserModule,
