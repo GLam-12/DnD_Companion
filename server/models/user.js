@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-
+const {CampaignSchema} = require('./campaign')
+const {CharSchema} = require('./char')
 
 const UserSchema = new mongoose.Schema({
     username: {type: String, required: true, minlength: 3},
