@@ -19,15 +19,33 @@ module.exports = {
         stats.save()
         .then(new_stats => {
             console.log('here is the new stats', new_stats)
-            Char.findOne({_id: req.params.id}) //We might need to change req.params.id
-            .then(char_to_receive_stats => {
-                console.log("Here is the char to recieve the char", char_to_receive_stats)
-                char_to_receive_stats.stats.push(new_stats)
-                char_to_receive_stats.save()
-                .then(char_with_stats => {
-                    console.log("here is the char with stats", char_with_stats)
-                    User.findOne({_id: req.params.id})//We might need to change req.params.id
-                    res.json(char_with_stats)
+            console.log('Here is the req.body', req.body)
+            const char = new Char()
+            char.name = req.body.name
+            char.class = req.body.class
+            char.background = req.body.background
+            char.level = req.body.level
+            char.race = req.body.race
+            char.alignment = req.body.alignment
+            char.experience = req.body.experience
+            char.equipment = req.body.equipment
+            char.stats.push(new_stats)
+            char.save()
+            .then(char_with_stats => {
+                console.log("here is the char with stats", char_with_stats)
+                User.findOne({_id: req.params.id})//We might need to change req.params.id
+                .then(user_to_update_with_char => {
+                    console.log("Here is the user with updated char", user_to_update_with_char)
+                    user_to_update_with_char.characters.push(char_with_stats)
+                    user_to_update_with_char.save()
+                    .then(user_with_new_char => {
+                        console.log("here is the user with new char", user_with_new_char)
+                        res.json(user_with_new_char)
+                    })
+                    .catch(err => {
+                        console.log('error when creating new char', err)
+                        res.json(err)
+                    })
                 })
                 .catch(err => {
                     console.log('error when creating new char', err)
