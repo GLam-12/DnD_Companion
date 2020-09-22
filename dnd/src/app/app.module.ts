@@ -15,6 +15,11 @@ import { CampaignFormComponent } from './campaign-form/campaign-form.component';
 import { LoginComponent } from './login/login.component';
 import { PrivateDieComponent } from './private-die/private-die.component';
 import { PublicDieComponent } from './public-die/public-die.component';
+import { CharactersComponent } from './characters/characters.component';
+import { MonstersListComponent } from './monsters-list/monsters-list.component';
+import { CampaignListComponent } from './campaign-list/campaign-list.component';
+import { SingleCampaignInfoComponent } from './single-campaign-info/single-campaign-info.component';
+
 
 
 @NgModule({
@@ -28,6 +33,10 @@ import { PublicDieComponent } from './public-die/public-die.component';
     LoginComponent,
     PrivateDieComponent,
     PublicDieComponent,
+    CharactersComponent,
+    MonstersListComponent,
+    CampaignListComponent,
+    SingleCampaignInfoComponent,
   ],
   imports: [
     BrowserModule,
