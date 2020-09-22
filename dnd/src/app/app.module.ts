@@ -12,6 +12,7 @@ import { NewCharComponent } from './new-char/new-char.component';
 import { MonsterFormComponent } from './monster-form/monster-form.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CampaignFormComponent } from './campaign-form/campaign-form.component';
+import { MonstersListComponent } from './monsters-list/monsters-list.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CampaignFormComponent } from './campaign-form/campaign-form.component';
     MonsterFormComponent,
     NavigationComponent,
     CampaignFormComponent,
+    MonstersListComponent,
   ],
   imports: [
     BrowserModule,
