@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CharFormPageComponent } from './char-form-page/char-form-page.component';
+import { CharPageComponent } from './char-page/char-page.component';
 import { LoginRegPageComponent } from './login-reg-page/login-reg-page.component';
 import { PlayerPageComponent } from './player-page/player-page.component';
 import { DmPageComponent } from './dm-page/dm-page.component';
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'DungeonMaster', component: DmPageComponent },
   { path: 'Campaigns/new', component: CampFormPageComponent },
   {path: 'login_registration', component: LoginRegPageComponent},
-  {path: 'player_page', component: PlayerPageComponent}
+  {path: 'player_page', component: PlayerPageComponent},
+  {path: 'character', component: CharPageComponent},
+  {path: 'create', component: CharFormPageComponent}
 ];
 
 @NgModule({
