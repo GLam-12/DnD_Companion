@@ -13,10 +13,10 @@ import { CampPageComponent } from './camp-page/camp-page.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: '/login_registration'},
-  {path: 'monster-form', component: MonsterFormPageComponent},
-  {path: 'Campaigns', component: CampPageComponent},
-  {path: 'DungeonMaster', component: DmPageComponent },
-  {path: 'Campaigns/new', component: CampFormPageComponent },
+  {path: 'monster_form', component: MonsterFormPageComponent},
+  {path: 'campaigns', component: CampPageComponent},
+  {path: 'dungeon_master', component: DmPageComponent },
+  {path: 'campaigns/new', component: CampFormPageComponent },
   {path: 'login_registration', component: LoginRegPageComponent},
   {path: 'player_page', component: PlayerPageComponent},
   {path: 'character', component: CharPageComponent},
