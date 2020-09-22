@@ -15,12 +15,8 @@ import { MonsterFormComponent } from './monster-form/monster-form.component';
 @NgModule({
   declarations: [
     AppComponent,
-
-    RegistrationComponent
-
-
-    NewCharComponent
-
+    RegistrationComponent,
+    NewCharComponent,
     MonsterFormComponent
 
   ],
