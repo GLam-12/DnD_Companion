@@ -19,6 +19,7 @@ import { CharactersComponent } from './characters/characters.component';
 import { MonstersListComponent } from './monsters-list/monsters-list.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
 import { SingleCampaignInfoComponent } from './single-campaign-info/single-campaign-info.component';
+import { CharInfoComponent } from './char-info/char-info.component';
 
 
 
@@ -37,6 +38,7 @@ import { SingleCampaignInfoComponent } from './single-campaign-info/single-campa
     MonstersListComponent,
     CampaignListComponent,
     SingleCampaignInfoComponent,
+    CharInfoComponent,
   ],
   imports: [
     BrowserModule,
