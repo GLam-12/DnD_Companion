@@ -1,6 +1,7 @@
 .campList{
-    height:400px;
+    height:100px;
     width:215px;
     background-color:#CCC;        
-    overflow:auto;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll;
 }
