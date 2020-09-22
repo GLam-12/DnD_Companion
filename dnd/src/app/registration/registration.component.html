@@ -1,21 +1,23 @@
 <div class="container">
     <div>
-        <form action="">
-            <label for="">Username</label>
+        <form class="d-flex flex-column">
+            <label for="">Username: </label>
             <input type="text" name="username" >
-            <label for="">Email</label>
+            <label for="">Email: </label>
             <input type="text" name="email" >
-            <label for="Role"></label>
-            <select name="role" id="" ></select>
-                <option value="DM">DM</option>
-                <option value="Player">Player</option> 
+            <label for="Role">Role: </label>
+            <select name="role" id="" >
+                <option value="DM">DM </option>
+                <option value="Player">Player </option> 
+            </select>
                 <!-- We will likely use a modal to do the above -->
-            <label for="">Password</label>
+            <label for="">Password: </label>
             <input type="password" name="password" >
-            <label for="Confirm Password"></label>
+            <label for="Confirm Password">Confirm Password: </label>
             <input type="passwword" name="confirm_password">
-            <input type="submit" >
-            <button [routerLink]="['/']">Cancel</button>
+
+            <p class="mt-4"><input class="btn btn-success mr-4" type="submit"> <button class="btn btn-warning" [routerLink]="['/']">Cancel</button></p>
+            
         </form>
     </div>
 </div>
