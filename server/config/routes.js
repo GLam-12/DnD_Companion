@@ -1,5 +1,6 @@
 const users = require('../controllers/users')
 
+
 module.exports = function(app, path){
     app.get('/', (req, res) =>{
 
@@ -22,7 +23,7 @@ module.exports = function(app, path){
     })
 
     app.delete('/user/:id', (req, res) => {
-        pets.delete_user(req, res)
+        users.delete_user(req, res)
     })
 
     app.all('*', (req, res) =>{
