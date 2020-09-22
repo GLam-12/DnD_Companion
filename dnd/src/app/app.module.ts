@@ -12,6 +12,7 @@ import { NewCharComponent } from './new-char/new-char.component';
 import { MonsterFormComponent } from './monster-form/monster-form.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CampaignFormComponent } from './campaign-form/campaign-form.component';
+import { CharactersComponent } from './characters/characters.component';
 import { MonstersListComponent } from './monsters-list/monsters-list.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
 
@@ -24,6 +25,7 @@ import { CampaignListComponent } from './campaign-list/campaign-list.component';
     MonsterFormComponent,
     NavigationComponent,
     CampaignFormComponent,
+    CharactersComponent,
     MonstersListComponent,
     CampaignListComponent,
   ],
