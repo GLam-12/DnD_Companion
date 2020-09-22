@@ -2,147 +2,137 @@
 
     <form>
 
-        <h1>Race, Class, and Background</h1>
+        <div class="form-group">
 
+            <h1 class="text-center">Race, Class, and Background</h1>
 
-        <p>Character Name: <input type="text" name="name" ></p>
+            <p>Character Name: <input class="form-control" type="text" name="name"></p>
 
-        <label>Class</label>
-        <select name="class" >
+            <label>Class: </label>
+            <select class="form-control" name="class">
+                <option value="Barbarian">Barbarian</option>
+                <option value="Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Monk">Monk</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Ranger">Ranger</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Sorcerer">Sorcerer</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Wizard">Wizard</option>
+            </select>
 
+            <label>Background: </label>
+            <select class="form-control" name="background">
+                <option value="Acolyte">Acolyte</option>
+                <option value="Charlatan">Charlatan</option>
+                <option value="Criminal">Criminal</option>
+                <option value="Entertainer">Entertainer</option>
+                <option value="Folk-Hero">Folk-Hero</option>
+                <option value="Guild-Artisan">Guild-Artisan</option>
+                <option value="Hermit">Hermit</option>
+                <option value="Noble">Noble</option>
+                <option value="Outlander">Outlander</option>
+                <option value="Sage">Sage</option>
+                <option value="Sailor">Sailor</option>
+                <option value="Soldier">Soldier</option>
+                <option value="Urchin">Urchin</option>
+            </select>
 
-            <option value="Barbarian">Barbarian</option>
-            <option value="Bard">Bard</option>
-            <option value="Cleric">Cleric</option>
-            <option value="Druid">Druid</option>
-            <option value="Fighter">Fighter</option>
-            <option value="Monk">Monk</option>
-            <option value="Paladin">Paladin</option>
-            <option value="Ranger">Ranger</option>
-            <option value="Rogue">Rogue</option>
-            <option value="Sorcerer">Sorcerer</option>
-            <option value="Warlock">Warlock</option>
-            <option value="Wizard">Wizard</option>
-        </select>
+            <label>Level: </label>
+            <select class="form-control" name="level">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
 
-        <label>Background</label>
+            <label>Race: </label>
+            <select class="form-control" name="race">
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Elf">Elf</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Goliath">Goliath</option>
+                <option value="Half-Elf">Half-Elf</option>
+                <option value="Half-Orc">Half-Orc</option>
+                <option value="Half.ing">Halfling</option>
+                <option value="Human">Human</option>
+                <option value="Tiefling">Tiefling</option>
+            </select>
 
-        <select name="background" >
+            <label>Alignment: </label>
+            <select class="form-control" name="alignment">
+                <option value="Lawful-Good">Lawful-Good</option>
+                <option value="Neutral-Good">Neutral-Good</option>
+                <option value="Chaotic-Good">Chaotic-Good</option>
+                <option value="Lawful-Neutral">Lawful-Neutral</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Chaotic-Neutral">Chaotic-Neutral</option>
+                <option value="Evil">Evil</option>
+                <option value="Neutral-Evil">Neutral-Evil</option>
+                <option value="Lawful-Evil">Lawful-Evil</option>
+            </select>
+            <p>Experience: <input class="form-control" type="number" name="experience"></p>
 
-            <option value="Acolyte">Acolyte</option>
-            <option value="Charlatan">Charlatan</option>
-            <option value="Criminal">Criminal</option>
-            <option value="Entertainer">Entertainer</option>
-            <option value="Folk-Hero">Folk-Hero</option>
-            <option value="Guild-Artisan">Guild-Artisan</option>
-            <option value="Hermit">Hermit</option>
-            <option value="Noble">Noble</option>
-            <option value="Outlander">Outlander</option>
-            <option value="Sage">Sage</option>
-            <option value="Sailor">Sailor</option>
-            <option value="Soldier">Soldier</option>
-            <option value="Urchin">Urchin</option>
-        </select>
+        </div>
 
-        <label>Level</label>
+        <div class="form-group">
 
-        <select name="level">
+            <h1 class="text-center">Abilities</h1>
 
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-        </select>
+            <p>Strength: <input class="form-control" type="number" name="strength"></p>
 
-        <label>Race</label>
+            <p>Dexterity: <input class="form-control" type="number" name="dexterity"></p>
 
+            <p>Constitution: <input class="form-control" type="number" name="constitution"></p>
 
-        <select name="race">
+            <p>Intelligence: <input class="form-control" type="number" name="intelligence"></p>
 
-            <option value="Dragonborn">Dragonborn</option>
-            <option value="Dwarf">Dwarf</option>
-            <option value="Elf">Elf</option>
-            <option value="Gnome">Gnome</option>
-            <option value="Goliath">Goliath</option>
-            <option value="Half-Elf">Half-Elf</option>
-            <option value="Half-Orc">Half-Orc</option>
-            <option value="Half.ing">Halfling</option>
-            <option value="Human">Human</option>
-            <option value="Tiefling">Tiefling</option>
-        </select>
+            <p>Wisdom: <input class="form-control" type="number" name="wisdom"></p>
 
-        <label>Alignment</label>
+            <p>Charisma: <input class="form-control" type="number" name="charisma"></p>
 
-        <select name="alignment">
+            <p>Armor Class: <input class="form-control" type="number" name="ac"></p>
 
-            <option value="Lawful-Good">Lawful-Good</option>
-            <option value="Neutral-Good">Neutral-Good</option>
-            <option value="Chaotic-Good">Chaotic-Good</option>
-            <option value="Lawful-Neutral">Lawful-Neutral</option>
-            <option value="Neutral">Neutral</option>
-            <option value="Chaotic-Neutral">Chaotic-Neutral</option>
-            <option value="Evil">Evil</option>
-            <option value="Neutral-Evil">Neutral-Evil</option>
-            <option value="Lawful-Evil">Lawful-Evil</option>
-        </select>
+            <p>Intiative: <input class="form-control" type="number" name="intiative"></p>
 
+            <p>Speed: <input class="form-control" type="number" name="speed"></p>
 
-        <p>Experience: <input type="number" name="experience" ></p>
+        </div>
 
+        <div class="form-group">
 
+            <h1 class="text-center">Equipment</h1>
 
+            <p>Weapon: <input class="form-control" type="text" name="weapon"></p>
 
+            <p>Armor: <input class="form-control" type="text" name="armor"></p>
 
+        </div>
 
-        <h1>Abilities</h1>
-
-
-        <p>Strength: <input type="number" name="strength" ></p>
-
-        <p>Dexterity: <input type="number" name="dexterity" ></p>
-
-        <p>Constitution: <input type="number" name="constitution" ></p>
-
-        <p>Intelligence: <input type="number" name="intelligence" ></p>
-
-        <p>Wisdom: <input type="number" name="wisdom" ></p>
-
-        <p>Charisma: <input type="number" name="charisma" ></p>
-
-        <p>Armor Class: <input type="number" name="ac" ></p>
-
-        <p>Intiative: <input type="number" name="intiative" ></p>
-
-        <p>Speed: <input type="number" name="speed" ></p>
-
-
-
-
-        <h1>Equipment</h1>
-
-        <p>Weapon: <input type="text" name="weapon"></p>
-
-        <p>Armor: <input type="text" name="armor"></p>
-
-
+        <div class="form-group">
+            <input class="btn btn-success" type="submit" value="Create Character">
+        </div>
+        
     </form>
 
 </div>
-
-
