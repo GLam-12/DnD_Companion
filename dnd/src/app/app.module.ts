@@ -15,6 +15,7 @@ import { CampaignFormComponent } from './campaign-form/campaign-form.component';
 import { CharactersComponent } from './characters/characters.component';
 import { MonstersListComponent } from './monsters-list/monsters-list.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
+import { SingleCampaignInfoComponent } from './single-campaign-info/single-campaign-info.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CampaignListComponent } from './campaign-list/campaign-list.component';
     CharactersComponent,
     MonstersListComponent,
     CampaignListComponent,
+    SingleCampaignInfoComponent,
   ],
   imports: [
     BrowserModule,
