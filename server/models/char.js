@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const {StatSchema} = require('./stat')
 
 const CharSchema = new mongoose.Schema({
     name: {type: String},

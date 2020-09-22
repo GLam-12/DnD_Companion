@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const {MonsterSchema} = require('./monster')
 
 const CampaignSchema = new mongoose.Schema({
     name: {type: String},
