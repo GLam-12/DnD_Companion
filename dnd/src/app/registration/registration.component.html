@@ -1,17 +1,12 @@
 <div class="container">
     <div>
-        <form action="">
+        <form (submit)="add_user()">
             <label for="">Username</label>
-            <input type="text" name="username" >
+            <input type="text" name="username" [(ngModel)]="new_user.username">
             <label for="">Email</label>
-            <input type="text" name="email" >
-            <label for="Role"></label>
-            <select name="role" id="" ></select>
-                <option value="DM">DM</option>
-                <option value="Player">Player</option> 
-                <!-- We will likely use a modal to do the above -->
+            <input type="text" name="email" [(ngModel)]="new_user.email">
             <label for="">Password</label>
-            <input type="password" name="password" >
+            <input type="password" name="password" [(ngModel)]="new_user.password">
             <label for="Confirm Password"></label>
             <input type="passwword" name="confirm_password">
             <input type="submit" >

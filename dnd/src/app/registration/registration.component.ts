@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-
-  constructor() { }
+  new_user = {}
+  constructor(private _httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  add_user() {
+    this._httpService.add_user(this.new_user)
+    .subscribe(data => {
+      console.log("Here is the new user", data)
+      this.router.navigate(['/player_page'])
+    })
+  } 
 }
