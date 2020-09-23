@@ -1,0 +1,25 @@
+.wrapper{
+    font-family: Luminari;
+    font-size: larger;
+    background-image: url(https://2.bp.blogspot.com/-Ca9lOugl9IY/VQoEpoRMOQI/AAAAAAAAAXw/tNx-ppE1XRA/s1600/Borderprinces.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    display: block;
+    border: solid;
+    background-color: lightgoldenrodyellow;
+}
+.body{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid;
+    align-items: baseline;
+}
+.rightbod{
+    display: grid;
+    border: solid;
+}
+.leftbod{
+    border: solid;
+}
