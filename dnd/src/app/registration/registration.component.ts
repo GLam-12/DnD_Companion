@@ -12,6 +12,7 @@ export class RegistrationComponent implements OnInit {
   constructor(private _httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
+    this._httpService.setupsocket()
   }
 
   add_user() {
