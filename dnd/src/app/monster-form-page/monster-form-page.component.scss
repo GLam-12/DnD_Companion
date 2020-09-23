@@ -1,0 +1,14 @@
+.wrapper{
+    font-family: Luminari;
+    font-size: larger;
+    background-image: url(https://www.gmbinder.com/images/cPPYV7h.png);
+    background-repeat: no-repeat;
+    background-size: 2000px 1000px;
+    background-color: black;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
