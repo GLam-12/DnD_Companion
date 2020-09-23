@@ -1,3 +1,9 @@
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #wrapper{
     font-family: Luminari;
     font-size: larger;
@@ -5,10 +11,4 @@
     background-repeat: no-repeat;
     background-size: 2000px 1100px;
     background-color: black;
-}
-
-.body{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
