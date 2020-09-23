@@ -1,31 +1,25 @@
 <div class="container">
-    <div>
-        <img src="https://www.iconfinder.com/data/icons/video-game-items-concepts-line-art/128/dd-dice-512.png" alt="" (click)='roll_dice_20()'>
+    <div class="d20" (click)='roll_dice_20()'>
         <p>{{roll_20}}</p>
     </div>
     
-    <div>
-        <img src="https://www.pngkey.com/png/full/48-486045_cube-clipart-blank-dice-blank-dice-clipart.png" alt="" (click)="roll_dice_6()">
-        <p>{{roll_6}}</p>
-    </div>
-    
-    <div>
-        <img src="https://s3.amazonaws.com/files.thegamecrafter.com/065e9f80d93ac8fa2ebdd60b419775a446d28c93" alt="" (click)="roll_dice_4()">
-        <p>{{roll_4}}</p>
-    </div>
-    
-    <div>
-        <img src="https://latex.artofproblemsolving.com/0/8/5/08541e5d1cec59e7dd49ea0bbdb45fe328dbecbb.png" alt="" (click)="roll_dice_12()">
+    <div class="d12" (click)="roll_dice_12()">
         <p>{{roll_12}}</p>
     </div>
     
-    <div>
-        <img src="https://i.imgur.com/rMI0ykO.png" alt="" (click)="roll_dice_8()">
+    <div class="d10" (click)="roll_dice_10()">
+        <p class="p10">{{roll_10}}</p>
+    </div>
+
+    <div class="d8" (click)="roll_dice_8()">
         <p>{{roll_8}}</p>
     </div>
+
+    <div class="d6" (click)="roll_dice_6()">
+        <p class="p6">{{roll_6}}</p>
+    </div>
     
-    <div>
-        <img src="https://i.imgur.com/JVcVY2k.png" alt="" (click)="roll_dice_10()">
-        <p>{{roll_10}}</p>
+    <div class="d4" (click)="roll_dice_4()">
+        <p class="p4">{{roll_4}}</p>
     </div>
 </div>
