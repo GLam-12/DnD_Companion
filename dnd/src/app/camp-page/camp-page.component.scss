@@ -1,20 +1,15 @@
 .wrapper{
     font-family: Luminari;
     font-size: larger;
-    background-image: url(https://2.bp.blogspot.com/-Ca9lOugl9IY/VQoEpoRMOQI/AAAAAAAAAXw/tNx-ppE1XRA/s1600/Borderprinces.jpg);
+    background-image: url(https://www.gmbinder.com/images/cPPYV7h.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 2000px 1700px;
+    background-color: black;
 }
+
 .body{
     display: flex;
-    justify-content: space-evenly;
-    border: solid;
-    align-items: baseline;
-}
-.rightbod{
-    display: grid;
-    border: solid;
-}
-.leftbod{
-    border: solid;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
