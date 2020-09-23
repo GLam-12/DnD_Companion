@@ -131,8 +131,11 @@
         <p>Weapon: <input type="text" name="weapon"></p>
 
         <p>Armor: <input type="text" name="armor"></p>
-
-
+        
+        <p>Spells:</p>
+        <select *ngIf = 'spells'>
+            <option *ngFor = 'let spell of spells.results'>{{spell.name}}</option>
+        </select>
     </form>
 
 </div>
