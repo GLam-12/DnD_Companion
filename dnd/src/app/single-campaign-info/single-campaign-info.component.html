@@ -1,7 +1,7 @@
 <div class='cform'>
     <form (submit)='onSubmit()'>
         <label for="name">Campaign Name:</label>
-        <input type="text" name="name"  required minlength="3">
+        <input type="text" name="name"  required minlength="3"><br>
         <label for="playerCount">Number of Characters in Campaign:</label>
         <select name="playerCount" id="playerCount">
             <option value="3">3</option>
@@ -11,23 +11,15 @@
             <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
-        </select>
-        <label for="description">Campaign description</label>
-        <textarea id="description" name="description" placeholder="Write something.." style="height:400px"></textarea>
-            <p>Can Halflings play in this Campaign?</p>
+        </select><br>
+        <label for="description">Campaign description:  </label><br>
+        <textarea id="description" name="description" placeholder="Write something.." style="height:400px"></textarea><br>
+            <p>Are you the DM of this Campaign?</p>
             <input type="radio" id="No" name="question1" value="No">
             <label for="No">No</label><br>
-            <input type="radio" id="No" name="question1" value="No">
-            <label for="No">Absolutely Not!</label><br>
-            <input type="radio" id="other" name="question1" value="other">
-            <label for="other">Maybe</label>
-            <p>Can outdoor spells be used in this Campaign?</p>
-            <input type="radio" id="No" name="question2" value="No">
-            <label for="No">No</label><br>
-            <input type="radio" id="Yes" name="question2" value="No">
-            <label for="No">Absolutely!</label><br>
-            <input type="radio" id="other" name="question3" value="other">
-            <label for="other">In certain parts</label>
+            <input type="radio" id="Yes" name="question1" value="Yes">
+            <label for="Yes">Yes</label><br>
+            <input type="submit" >
     </form>
 </div>
 
