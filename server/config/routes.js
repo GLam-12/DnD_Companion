@@ -1,4 +1,6 @@
 const users = require('../controllers/users')
+const stats = require('../controllers/stats')
+const chars = require('../controllers/chars')
 
 
 module.exports = function(app, path){
