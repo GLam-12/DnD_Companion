@@ -1,23 +1,8 @@
 <h3>List of Monsters:</h3>
 <div>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
-    <option>monster name</option>
+    <select name="monsters" *ngIf = 'monsters'>
+        <option *ngFor = 'let monster of monsters.results'>{{monster.name}}</option>
+    </select>
 </div>
 
 <h3>Your Monsters:</h3>
