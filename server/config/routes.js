@@ -1,6 +1,7 @@
 const users = require('../controllers/users')
 const stats = require('../controllers/stats')
 const chars = require('../controllers/chars')
+const campaigns = require('../controllers/campaigns')
 
 
 module.exports = function(app, path){
@@ -34,6 +35,10 @@ module.exports = function(app, path){
 
     app.all('*', (req, res) =>{
         res.sendFile(path + '/index.html')
+    })
+
+    app.post('/new_campaign', (req,res) => {
+        campaigns.add_campaign(req,res)
     })
 }
 
