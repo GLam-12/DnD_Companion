@@ -1,15 +1,15 @@
 <div class="container">
 
-    <form>
+    <form (submit)='onSubmit()'>
 
         <div class="form-group">
 
             <h1 class="text-center">Race, Class, and Background</h1>
 
-            <p>Character Name: <input class="form-control" type="text" name="name"></p>
+            <p>Character Name: <input class="form-control" type="text" name="name" [(ngModel)]="new_char.name"></p>
 
             <label>Class: </label>
-            <select class="form-control" name="class">
+            <select class="form-control" name="class" [(ngModel)]="new_char.class">
                 <option value="Barbarian">Barbarian</option>
                 <option value="Bard">Bard</option>
                 <option value="Cleric">Cleric</option>
@@ -25,7 +25,7 @@
             </select>
 
             <label>Background: </label>
-            <select class="form-control" name="background">
+            <select class="form-control" name="background" [(ngModel)]="new_char.background">
                 <option value="Acolyte">Acolyte</option>
                 <option value="Charlatan">Charlatan</option>
                 <option value="Criminal">Criminal</option>
@@ -42,7 +42,7 @@
             </select>
 
             <label>Level: </label>
-            <select class="form-control" name="level">
+            <select class="form-control" name="level" [(ngModel)]="new_char.level">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -66,7 +66,7 @@
             </select>
 
             <label>Race: </label>
-            <select class="form-control" name="race">
+            <select class="form-control" name="race" [(ngModel)]="new_char.race">
                 <option value="Dragonborn">Dragonborn</option>
                 <option value="Dwarf">Dwarf</option>
                 <option value="Elf">Elf</option>
@@ -80,7 +80,7 @@
             </select>
 
             <label>Alignment: </label>
-            <select class="form-control" name="alignment">
+            <select class="form-control" name="alignment" [(ngModel)]="new_char.alignment">
                 <option value="Lawful-Good">Lawful-Good</option>
                 <option value="Neutral-Good">Neutral-Good</option>
                 <option value="Chaotic-Good">Chaotic-Good</option>
@@ -92,7 +92,7 @@
                 <option value="Lawful-Evil">Lawful-Evil</option>
             </select>
             
-            <p>Experience: <input class="form-control" type="number" name="experience"></p>
+            <p>Experience: <input class="form-control" type="number" name="experience" [(ngModel)]="new_char.experience"></p>
 
         </div>
 
@@ -100,23 +100,25 @@
 
             <h1 class="text-center">Abilities</h1>
 
-            <p>Strength: <input class="form-control" type="number" name="strength"></p>
+            <p>Strength: <input class="form-control" type="number" name="strength" [(ngModel)]="new_char.strength"></p>
 
-            <p>Dexterity: <input class="form-control" type="number" name="dexterity"></p>
+            <p>Dexterity: <input class="form-control" type="number" name="dexterity" [(ngModel)]="new_char.dexterity"></p>
 
-            <p>Constitution: <input class="form-control" type="number" name="constitution"></p>
+            <p>Constitution: <input class="form-control" type="number" name="constitution" [(ngModel)]="new_char.constitution"></p>
 
-            <p>Intelligence: <input class="form-control" type="number" name="intelligence"></p>
+            <p>Intelligence: <input class="form-control" type="number" name="intelligence" [(ngModel)]="new_char.intelligence"></p>
 
-            <p>Wisdom: <input class="form-control" type="number" name="wisdom"></p>
+            <p>Wisdom: <input class="form-control" type="number" name="wisdom" [(ngModel)]="new_char.wisdom"></p>
 
-            <p>Charisma: <input class="form-control" type="number" name="charisma"></p>
+            <p>Charisma: <input class="form-control" type="number" name="charisma" [(ngModel)]="new_char.charisma"></p>
 
-            <p>Armor Class: <input class="form-control" type="number" name="ac"></p>
+            <p>Armor Class: <input class="form-control" type="number" name="ac" [(ngModel)]="new_char.ac"></p>
 
-            <p>Intiative: <input class="form-control" type="number" name="intiative"></p>
+            <p>Intiative: <input class="form-control" type="number" name="intiative" [(ngModel)]="new_char.intiative"></p>
 
-            <p>Speed: <input class="form-control" type="number" name="speed"></p>
+            <p>Speed: <input class="form-control" type="number" name="speed" [(ngModel)]="new_char.speed"></p>
+
+            <p>Health: <input type="number" name="health" [(ngModel)]="new_char.health"></p>
 
         </div>
 
@@ -124,9 +126,9 @@
 
             <h1 class="text-center">Equipment</h1>
 
-            <p>Weapon: <input class="form-control" type="text" name="weapon"></p>
+            <p>Weapon: <input class="form-control" type="text" name="weapon" [(ngModel)]="new_char.weapon"></p>
 
-            <p>Armor: <input class="form-control" type="text" name="armor"></p>
+            <p>Armor: <input class="form-control" type="text" name="armor" [(ngModel)]="new_char.armor"></p>
 
         </div>
 

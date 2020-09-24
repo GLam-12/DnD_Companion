@@ -8,6 +8,7 @@ import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
   styleUrls: ['./campaign-form.component.scss']
 })
 export class CampaignFormComponent implements OnInit {
+
   campaign: any
   public user:any=[];
   key: any;
