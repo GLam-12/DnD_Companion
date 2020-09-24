@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {StatSchema} = require('./stat')
+
 
 const CharSchema = new mongoose.Schema({
     name: {type: String},
@@ -9,7 +9,16 @@ const CharSchema = new mongoose.Schema({
     race: {type: String},
     alignment: {type: String},
     experience: {type: String},
-    stats: [StatSchema],
+    strength: {type: Number},
+    dexterity: {type: Number},
+    constitution: {type: Number},
+    intellegence: {type: Number},
+    wisdom: {type: Number},
+    charisma: {type: Number},
+    ac: {type: Number},
+    intiative: {type: Number},
+    speed: {type: Number},
+    health: {type: Number},
     equipment: {type: String}
 })
 

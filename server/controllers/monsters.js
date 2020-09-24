@@ -6,7 +6,7 @@ module.exports = {
     add_monster:(req, res) => {
         User.findOne({_id: req.params.id})
         .then(user => {
-            Campaign.findONe({_id: req.prams.id})
+            Campaign.findOne({_id: req.prams.id})
             .then(campaign => {
                 const monster = new Monster()
                 monster.name = req.body.name
