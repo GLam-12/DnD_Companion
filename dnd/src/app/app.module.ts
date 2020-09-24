@@ -1,18 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { StorageServiceModule} from 'angular-webstorage-service';
+
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { HttpService } from './http.service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { RegistrationComponent } from './registration/registration.component';
-
-
 import { NewCharComponent } from './new-char/new-char.component';
-
 import { MonsterFormComponent } from './monster-form/monster-form.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CampaignFormComponent } from './campaign-form/campaign-form.component';
@@ -64,7 +62,8 @@ import { CharInfoComponent } from './char-info/char-info.component';
     HttpClientModule,
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StorageServiceModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

@@ -32,13 +32,14 @@ module.exports = function(app, path){
     app.delete('/user/:id', (req, res) => {
         users.delete_user(req, res)
     })
-
+    
+    app.post('/new_campaign/:userid', (req,res) => {
+        campaigns.add_campaign(req,res)
+    })
+    
     app.all('*', (req, res) =>{
         res.sendFile(path + '/index.html')
     })
 
-    app.post('/new_campaign', (req,res) => {
-        campaigns.add_campaign(req,res)
-    })
 }
 

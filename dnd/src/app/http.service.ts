@@ -23,10 +23,10 @@ export class HttpService {
   }
   find_user(user_login){
     console.log("User_login at service", user_login)
-    return this._http.post('/login', user_login)
+    return this._http.post<{message_error: string, _id: string}>('/login', user_login)
   }
-  add_campaign(campaign) {
+  add_campaign(id, campaign) {
     console.log('inside the http service', campaign)
-    return this._http.post('/new_campaign', campaign)
+    return this._http.post(`/new_campaign/${id}`, campaign)
   }
 }
