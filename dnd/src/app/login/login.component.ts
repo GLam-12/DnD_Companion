@@ -39,4 +39,8 @@ export class LoginComponent implements OnInit {
     this.user[key]= this.storage.get(key);
   }
 
+  logout(){
+    localStorage.clear()
+    console.log(this.storage.get('Current User ID'))
+  }
 }
