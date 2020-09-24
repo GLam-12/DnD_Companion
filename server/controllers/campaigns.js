@@ -1,20 +1,28 @@
-const {Campaign} = require('./models/campaign')
+const {Campaign} = require('../models/campaign')
 const { User } = require('../models/user')
 
 
 module.exports = {
     add_campaign:(req, res) => {
-        User.findOne({_id: req.params.id})
+        console.log('req.body', req.body)
+        console.log('params', req.params)
+        User.findOne({_id: req.params.userid})
         .then(user => {
             const campaign = new Campaign()
             campaign.name = req.body.name
             campaign.player_count = req.body.player_count
             campaign.dm = req.body.dm
+            campaign.description = req.body.description
             campaign.save()
             .then(new_campaign => {
+                console.log('new campaign', new_campaign)
                 user.campaigns.push(new_campaign)
                 user.save()
                 .then(data => res.json(data))
+                .catch(err => {
+                    console.log('Error when creating new user', err)
+                    res.json(err)
+                })
             })
             .catch(err => {
                 console.log('Error when creating new user', err)

@@ -21,9 +21,12 @@ export class HttpService {
   all_spells(){
     return this._http.get('https://www.dnd5eapi.co/api/spells')
   }
-
   find_user(user_login){
     console.log("User_login at service", user_login)
     return this._http.post<{message_error: string, _id: string}>('/login', user_login)
+  }
+  add_campaign(id, campaign) {
+    console.log('inside the http service', campaign)
+    return this._http.post(`/new_campaign/${id}`, campaign)
   }
 }
