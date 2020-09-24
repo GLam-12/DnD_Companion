@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { HttpService } from '../http.service';
+import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,9 @@ export class LoginComponent implements OnInit {
   user_login = {username: '', password: ''}
   login_error:string
   session:string
-  constructor(private _httpService: HttpService) { }
+
+  public user:any=[];
+  constructor(private _httpService: HttpService, @Inject(LOCAL_STORAGE) private storage: WebStorageService) { }
 
   ngOnInit() {
     this.login_error = ''
@@ -25,8 +28,15 @@ export class LoginComponent implements OnInit {
       }
       else {
         console.log("We logged in")
+        this.saveInLocal('Current User ID', data._id)
       }
     })
+  }
+
+  saveInLocal(key, val): void {
+    console.log('recieved= key:' , key , val);
+    this.storage.set(key, val);
+    this.user[key]= this.storage.get(key);
   }
 
 }
