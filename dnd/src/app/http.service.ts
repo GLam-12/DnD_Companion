@@ -29,4 +29,8 @@ export class HttpService {
     console.log('inside the http service', campaign)
     return this._http.post(`/new_campaign/${id}`, campaign)
   }
+  add_monster(id, monster) {
+    console.log('inside the http service', monster)
+    return this._http.post(`/new_monster/${id}`, monster)
+  }
 }
