@@ -8,7 +8,7 @@ import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 })
 export class LoginRegPageComponent implements OnInit {
 
-  public data:any=[];
+  public user:any=[];
 
 
 
@@ -22,8 +22,8 @@ export class LoginRegPageComponent implements OnInit {
 
 getFromLocal(key): void {
     console.log('recieved= key:' + key);
-    this.data[key]= this.storage.get(key);
-    console.log(this.data);
+    this.user[key]= this.storage.get(key);
+    console.log(this.user);
   }
 
   ngOnInit() {
