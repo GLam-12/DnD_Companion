@@ -2,10 +2,14 @@
     <div class="d-flex flex-column" (submit)="login()">
         <form action="">
             <p *ngIf="login_error">{{login_error}}</p>
-            <label for="">Username</label>
+            <label for="">Username:</label>
+            <br>
             <input type="text" name="username" id="" [(ngModel)]="user_login.username">
-            <label for="">Password</label>
+            <br>
+            <label for="">Password:</label>
+            <br>
             <input type="password" name="password" id="" [(ngModel)]="user_login.password">
+            <br>
             <input class="btn btn-success mt-3" type="submit" value="Login">
         </form>
     </div>
