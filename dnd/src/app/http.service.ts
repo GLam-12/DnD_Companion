@@ -21,4 +21,9 @@ export class HttpService {
   all_spells(){
     return this._http.get('https://www.dnd5eapi.co/api/spells')
   }
+
+  find_user(user_login){
+    console.log("User_login at service", user_login)
+    return this._http.post('/login', user_login)
+  }
 }
