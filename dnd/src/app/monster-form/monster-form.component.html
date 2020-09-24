@@ -1,22 +1,22 @@
 <div class="container">
-    <form>
+    <form (submit)='onSubmit()'>
 
         <div class="form-group">
 
             <label>Monster Name:</label>
-            <p><input class="form-control" type="text"></p>
+            <p><input class="form-control" type="text" name="name" [(ngModel)]='monster.name'></p>
 
 
             <label>Armor Class:</label>
-            <p><input class="form-control" type="number"></p>
+            <p><input class="form-control" type="number" name="ac" [(ngModel)]='monster.ac'></p>
 
 
             <label>Health:</label>
-            <p><input class="form-control" type="number"></p>
+            <p><input class="form-control" type="number" name="health" [(ngModel)]='monster.health'></p>
 
 
             <label>Description:</label>
-            <p><textarea class="form-control" name="description" id="" cols="30" rows="10"></textarea></p>
+            <p><textarea class="form-control" name="description" id="" cols="30" rows="10" [(ngModel)]='monster.description'></textarea></p>
 
 
         </div>

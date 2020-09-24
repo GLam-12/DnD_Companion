@@ -1,6 +1,7 @@
 const users = require('../controllers/users')
 const stats = require('../controllers/stats')
 const chars = require('../controllers/chars')
+const campaigns = require('../controllers/campaigns')
 
 
 module.exports = function(app, path){
@@ -31,9 +32,14 @@ module.exports = function(app, path){
     app.delete('/user/:id', (req, res) => {
         users.delete_user(req, res)
     })
-
+    
+    app.post('/new_campaign/:userid', (req,res) => {
+        campaigns.add_campaign(req,res)
+    })
+    
     app.all('*', (req, res) =>{
         res.sendFile(path + '/index.html')
     })
+
 }
 
