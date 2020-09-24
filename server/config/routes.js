@@ -1,5 +1,4 @@
 const users = require('../controllers/users')
-const stats = require('../controllers/stats')
 const chars = require('../controllers/chars')
 const campaigns = require('../controllers/campaigns')
 const monsters = require('../controllers/monsters')
@@ -33,6 +32,11 @@ module.exports = function(app, path){
     app.delete('/user/:id', (req, res) => {
         users.delete_user(req, res)
     })
+
+    app.post('/newchar/:id', (req,res) => {
+        chars.add_char(req,res)
+    }) 
+
     
     app.post('/new_campaign/:userid', (req,res) => {
         campaigns.add_campaign(req,res)
