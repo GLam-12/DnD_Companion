@@ -16,6 +16,10 @@ module.exports = function(app, path){
         users.one_user(req, res)
     })
 
+    app.post('/login', (req, res) =>{
+        users.login(req, res)
+    })
+
     app.post('/user', (req, res) => {
         users.add_user(req, res)
     })

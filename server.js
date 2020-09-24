@@ -4,7 +4,15 @@ const app = express()
 const mongoose = require('mongoose');
 const http = require('http').createServer(app)
 const io = require('socket.io')(http)
+const session = require('express-session');
 
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 60000 }
+}))
 
 require('./server/config/mongoose')
 

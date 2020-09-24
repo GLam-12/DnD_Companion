@@ -1,4 +1,56 @@
-img{
+.d20{
+    background-image: url(https://www.iconfinder.com/data/icons/video-game-items-concepts-line-art/128/dd-dice-512.png);
+    background-size: 100px 100px;
     height: 100px;
     width: 100px;
+}
+.d12{
+    background-image: url(https://latex.artofproblemsolving.com/0/8/5/08541e5d1cec59e7dd49ea0bbdb45fe328dbecbb.png);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.d10{
+    background-image: url(https://i.imgur.com/JVcVY2k.png);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.d8{
+    background-image: url(https://i.imgur.com/rMI0ykO.png);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.d6{
+    background-image: url(https://www.pngkey.com/png/full/48-486045_cube-clipart-blank-dice-blank-dice-clipart.png);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+.d4{
+    background-image: url(https://s3.amazonaws.com/files.thegamecrafter.com/065e9f80d93ac8fa2ebdd60b419775a446d28c93);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+}
+
+p{
+    text-align: center;
+    padding-top: 35%;
+}
+
+.p4{
+    margin-left: 20%;
+    padding-top: 35%;
+}
+
+.p6{
+    text-align: center;
+    padding-top: 10%;
+}
+
+.p10{
+    text-align: center;
+    padding-top: 25%;
 }

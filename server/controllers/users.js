@@ -25,6 +25,27 @@ module.exports = {
         })
     },
 
+    login:(req, res) => {
+        console.log("here is the req body on login", req.body)
+        User.findOne({username: req.body.username, password: req.body.password})
+        .then(user => {
+            if (user == null){
+                res.json({message_error:"No matching username/pw in DB"})
+            }
+            else {
+                console.log('Here is the one user', user)
+                req.session.user_id = user._id
+                res.json(user)
+            }
+            
+            
+        })
+        .catch(err => {
+            console.log('Error when showing a single users', err)
+            res.json(err)
+        })
+    },
+
     add_user:(req, res) => {
         console.log('Here is the req.body', req.body)
         const user = new User()
