@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this._httpService.find_user(this.user_login)
     .subscribe(data =>{
       console.log("Here is the data from login", data)
-      if(data == null){
+      if(data.message_error){
         this.login_error = "Please enter a correct username and password"
       }
       else {

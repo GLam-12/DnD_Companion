@@ -24,6 +24,6 @@ export class HttpService {
 
   find_user(user_login){
     console.log("User_login at service", user_login)
-    return this._http.post('/login', user_login)
+    return this._http.post<{message_error: string}>('/login', user_login)
   }
 }
