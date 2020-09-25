@@ -4,8 +4,11 @@
 
         <h1>Your List of Characters: </h1>
 
-        <!-- Make a card for each character or a list -->
-        <!-- Make the list scrollable -->
+        <div *ngFor="let character of characters">
+
+            <a [routerLink]="['/character', character._id]">{{character.name}}</a>
+
+        </div>
 
     </div>
 

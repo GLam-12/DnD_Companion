@@ -1,9 +1,11 @@
 <div class='cform'>
-    <form (submit)='onSubmit()'>
+    <form (submit)='onSubmit()' *ngIf='campaign'>
         <label for="name">Campaign Name:</label>
-        <input type="text" name="name"  required minlength="3"><br>
+        <input type="text" name="name"  required minlength="3" [(ngModel)]='campaign.name'><br>
+        <label for="description">Description:</label><br>
+        <textarea name="description" id="" cols="30" rows="10" [(ngModel)] = 'campaign.description'></textarea><br>
         <label for="playerCount">Number of Characters in Campaign:</label>
-        <select name="playerCount" id="playerCount">
+        <select name="playerCount" id="playerCount" [(ngModel)]='campaign.player_count'>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
@@ -12,14 +14,7 @@
             <option value="8">8</option>
             <option value="9">9</option>
         </select><br>
-        <label for="description">Campaign description:  </label><br>
-        <textarea id="description" name="description" placeholder="Write something.." style="height:400px"></textarea><br>
-            <p>Are you the DM of this Campaign?</p>
-            <input type="radio" id="No" name="question1" value="No">
-            <label for="No">No</label><br>
-            <input type="radio" id="Yes" name="question1" value="Yes">
-            <label for="Yes">Yes</label><br>
-            <input type="submit" value="Update">
+        <input type="submit" value="Update">
     </form>
 </div>
 

@@ -12,14 +12,15 @@ const CharSchema = new mongoose.Schema({
     strength: {type: Number},
     dexterity: {type: Number},
     constitution: {type: Number},
-    intellegence: {type: Number},
+    intelligence: {type: Number},
     wisdom: {type: Number},
     charisma: {type: Number},
     ac: {type: Number},
-    intiative: {type: Number},
+    initiative: {type: Number},
     speed: {type: Number},
     health: {type: Number},
-    equipment: {type: String}
+    weapon: {type: String},
+    armor: {type: String}
 })
 
 const Char = new mongoose.model('Char', CharSchema)

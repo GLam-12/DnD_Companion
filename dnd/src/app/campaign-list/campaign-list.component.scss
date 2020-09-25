@@ -1,8 +1,9 @@
 .campList{
-    height:100px;
-    width:215px;
-    background-color:white;        
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: scroll;
-    
+    background-color:white;   
+    border: solid;
+    margin-bottom: 20px;
+}
+
+h4{
+    color: #007bff;
 }

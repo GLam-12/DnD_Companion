@@ -3,6 +3,17 @@ const {Campaign} = require('../models/campaign')
 const { User } = require('../models/user')
 
 module.exports = {
+    all_monsters:(req, res)=>{
+        Monster.find({}).sort({type: 'asc'})
+        .then(all_monsters => {
+            console.log('Here are all the users', all_monsters)
+            res.json(all_monsters)
+        })
+        .catch(err => {
+            console.log('Error when showing all users', err)
+            res.json(err)
+        })
+    },
     add_monster:(req, res) => {
         User.findOne({_id: req.params.userid})
         .then(user => {

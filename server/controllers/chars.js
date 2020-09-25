@@ -4,6 +4,16 @@ const { User } = require('../models/user')
 
 module.exports = {
 
+    all_characters: (req,res) => {
+        Char.find({}).sort({type: 'asc'})
+        .then(all_characters => {
+            res.json(all_characters)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+    },
+
     add_char:(req, res) => {
         console.log('Here is the req.body', req.body)
         const char = new Char()
@@ -17,7 +27,7 @@ module.exports = {
         char.strength = req.body.strength
         char.dexterity = req.body.dexterity
         char.constitution = req.body.constitution
-        char.intellegence = req.body.intellegence
+        char.intelligence = req.body.intelligence
         char.wisdom = req.body.wisdom
         char.charisma = req.body.charisma
         char.ac = req.body.ac
@@ -54,6 +64,18 @@ module.exports = {
             res.json(err)
         })
     },
+
+    one_character: (req,res) => {
+        Char.findOne({_id: req.params.id})
+        .then(character => {
+            console.log('here is the one character: ', character)
+            res.json(character)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+    },
+
 
     edit_char:(req, res)=> {
         // Need to figure out logic when other pieces are ready

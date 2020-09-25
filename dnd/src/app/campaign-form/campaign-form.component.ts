@@ -1,6 +1,7 @@
 import { HttpService } from '../http.service'
 import { Component, OnInit, Inject } from '@angular/core';
 import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-campaign-form',
@@ -14,7 +15,7 @@ export class CampaignFormComponent implements OnInit {
   key: any;
   logged_in_user: any
   
-  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService, private _httpService: HttpService) { }
+  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService, private _httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
     this.campaign = {name: '', player_count: 3, description: '', dm: ''}
@@ -31,6 +32,7 @@ export class CampaignFormComponent implements OnInit {
     this._httpService.add_campaign(this.logged_in_user, this.campaign)
     .subscribe(data => {
       console.log('campaign is made', data)
+      this.router.navigate(['/dungeon_master'])
       this.campaign = {name: '', player_count: 3, description: '', dm: ''}
     })
   }
