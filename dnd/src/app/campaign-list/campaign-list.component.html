@@ -1,6 +1,6 @@
-<div class="campList" *ngFor = 'let campaign of campaigns'>
+<div class="campList" *ngFor = 'let campaign of campaigns' [routerLink] = "['/campaigns',campaign._id]">
     <table>
-        <tr>
+        <tr >
             <td><h4>Title:</h4></td>
             <td><p>{{campaign.name}}</p></td>
         </tr>

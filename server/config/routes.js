@@ -46,6 +46,10 @@ module.exports = function(app, path){
         campaigns.all_campaigns(req,res)
     })
 
+    app.get('/get_campaign/:id', (req,res)=>{
+        campaigns.one_campaign(req,res)
+    })
+
     app.post('/new_monster/:userid', (req,res) => {
         monsters.add_monster(req,res)
     })
