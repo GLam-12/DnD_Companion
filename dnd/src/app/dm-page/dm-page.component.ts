@@ -9,8 +9,8 @@ import { HttpService } from '../http.service'
   styleUrls: ['./dm-page.component.scss']
 })
 export class DmPageComponent implements OnInit {
-  campaigns: any
-  logged_in_user:string
+  campaigns: any;
+  logged_in_user:string;
   
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService, private router: Router,private _httpService: HttpService) { }
 
