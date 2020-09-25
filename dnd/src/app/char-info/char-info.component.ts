@@ -46,4 +46,11 @@ export class CharInfoComponent implements OnInit {
     })
   }
 
+  onSubmit() {
+    this._httpService.edit_character(this.character_id, this.character)
+    .subscribe(data => {
+      console.log('edited character: ', data)
+    })
+  }
+
 }

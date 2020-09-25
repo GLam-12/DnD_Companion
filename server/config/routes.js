@@ -49,6 +49,10 @@ module.exports = function(app, path){
         chars.one_character(req,res)
     })
     
+    app.put('/edit_character/:id', (req,res) => {
+        chars.edit_char(req,res)
+    })
+
     app.get('/show_campaigns', (req,res) => {
         campaigns.all_campaigns(req,res)
     })

@@ -2,7 +2,7 @@
 
     <!-- Some changes will need to be made to this form -->
 
-    <form *ngIf="character">
+    <form (submit)='onSubmit()' *ngIf="character">
 
         <div class="form-group">
             <h1>Race, Class, and Background</h1>

@@ -80,22 +80,36 @@ module.exports = {
     edit_char:(req, res)=> {
         // Need to figure out logic when other pieces are ready
         console.log("Here is the edit body", req.body)
-        User.findOne({_id: req.params.id})
-        .then(user_to_update => {
-            
-            user_to_update.save()
-            .then(updated_char => {
-                console.log('here is the Updated char', updated_char)
-                res.json(updated_char)
+        Char.findOne({_id: req.params.id})
+        .then(char => {
+            char.name = req.body.name
+            char.class = req.body.class
+            char.background = req.body.background
+            char.level = req.body.level
+            char.race = req.body.race
+            char.alignment = req.body.alignment
+            char.experience = req.body.experience
+            char.strength = req.body.strength
+            char.dexterity = req.body.dexterity
+            char.constitution = req.body.constitution
+            char.intelligence = req.body.intelligence
+            char.wisdom = req.body.wisdom
+            char.charisma = req.body.charisma
+            char.ac = req.body.ac
+            char.initiative = req.body.initiative
+            char.speed = req.body.speed
+            char.health = req.body.health
+            char.weapon = req.body.weapon
+            char.armor = req.body.armor
+            char.save()
+            .then(updated_data => {
+                res.json(updated_data)
             })
             .catch(err => {
-                err.custom_message = "char Name, Type, and Description must be at least 3 characters long"
-                console.log('Error from updated char', err)
                 res.json(err)
             })
         })
         .catch(err => {
-            console.log('Error when editing char', err)
             res.json(err)
         })
     },
