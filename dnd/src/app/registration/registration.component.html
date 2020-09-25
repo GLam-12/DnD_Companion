@@ -9,8 +9,8 @@
             <input type="password" name="password" [(ngModel)]="new_user.password">
             <label for="Confirm Password">Confirm Password: </label>
             <input type="passwword" name="confirm_password">
-            <p class="mt-4"><input class="btn btn-success mr-4" type="submit" value="Register">
-            <button class="btn btn-warning" [routerLink]="['/player_page']">Cancel</button></p>
+            <div class="mt-4"><input class="btn btn-success mr-4" type="submit">
+            <div class="btn btn-warning" (click)="clear_form()">Cancel</div></div>
         </form>
     </div>
 </div>

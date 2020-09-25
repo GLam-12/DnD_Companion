@@ -12,6 +12,7 @@ export class RegistrationComponent implements OnInit {
   constructor(private _httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
+    console.log('*****')
     this._httpService.setupsocket()
   }
 
@@ -22,4 +23,8 @@ export class RegistrationComponent implements OnInit {
       this.router.navigate(['/player_page'])
     })
   } 
+
+  clear_form(){
+    this.new_user = {}
+  }
 }
