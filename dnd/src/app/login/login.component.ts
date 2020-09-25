@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { HttpService } from '../http.service';
 import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   session:string
 
   public user:any=[];
-  constructor(private _httpService: HttpService, @Inject(LOCAL_STORAGE) private storage: WebStorageService) { }
+  constructor(private _httpService: HttpService, @Inject(LOCAL_STORAGE) private storage: WebStorageService, private router: Router) { }
 
   ngOnInit() {
     this.login_error = ''
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
       else {
         console.log("We logged in")
         this.saveInLocal('Current User ID', data._id)
+        this.router.navigate(['/dungeon_master'])
       }
     })
   }

@@ -2,15 +2,27 @@
     <div>
         <form class="d-flex flex-column" (submit)="add_user()">
             <label for="">Username: </label>
-            <input type="text" name="username"[(ngModel)]="new_user.username" >
+            <div *ngIf="name.touched">
+                <p *ngIf="name.errors" class="text-danger">Name must be at least 3 chars long</p>
+            </div>
+            <input type="text" name="username" required minlength="3" [(ngModel)]="new_user.username" #name="ngModel">
             <label for="">Email: </label>
-            <input type="text" name="email" [(ngModel)]="new_user.email">
+            <div *ngIf="email.touched">
+                <p *ngIf="email.errors" class="text-danger">Email must be at least 3 chars long</p>
+            </div>
+            <input type="text" name="email" required minlength="3" [(ngModel)]="new_user.email" #email="ngModel">
             <label for="">Password: </label>
-            <input type="password" name="password" [(ngModel)]="new_user.password">
+            <div *ngIf="password.touched">
+                <p *ngIf="password.errors" class="text-danger">Password must be at least 8 chars long</p>
+            </div>
+            <input type="password" name="password" required minlength="8" [(ngModel)]="new_user.password" #password="ngModel">
             <label for="Confirm Password">Confirm Password: </label>
             <input type="passwword" name="confirm_password">
             <div class="mt-4"><input class="btn btn-success mr-4" type="submit">
             <div class="btn btn-warning" (click)="clear_form()">Cancel</div></div>
         </form>
+        <hr>
+        
+        <hr>
     </div>
 </div>

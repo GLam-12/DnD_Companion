@@ -1,7 +1,7 @@
 <div class="container">
     <div class="d-flex flex-column" (submit)="login()">
         <form action="">
-            <p *ngIf="login_error">{{login_error}}</p>
+            <p class="text-danger" *ngIf="login_error">{{login_error}}</p>
             <label for="">Username:</label>
             <br>
             <input type="text" name="username" id="" [(ngModel)]="user_login.username">
