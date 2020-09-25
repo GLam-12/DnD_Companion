@@ -48,4 +48,9 @@ export class HttpService {
   show_characters() {
     return this._http.get('/show_characters')
   }
+
+  get_character(id) {
+    return this._http.get(`/get_character/${id}`)
+  }
+
 }
