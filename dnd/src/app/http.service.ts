@@ -42,6 +42,9 @@ export class HttpService {
   get_campaign(id){
     return this._http.get(`/get_campaign/${id}`)
   }
+  edit_campaign(id, campaign){
+    return this._http.put(`/edit_campaign/${id}`, campaign)
+  }
   show_monsters(){
     return this._http.get('/show_monsters')
   }

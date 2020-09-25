@@ -2,6 +2,8 @@
     <form (submit)='onSubmit()' *ngIf='campaign'>
         <label for="name">Campaign Name:</label>
         <input type="text" name="name"  required minlength="3" [(ngModel)]='campaign.name'><br>
+        <label for="description">Description:</label><br>
+        <textarea name="description" id="" cols="30" rows="10" [(ngModel)] = 'campaign.description'></textarea><br>
         <label for="playerCount">Number of Characters in Campaign:</label>
         <select name="playerCount" id="playerCount" [(ngModel)]='campaign.player_count'>
             <option value="3">3</option>

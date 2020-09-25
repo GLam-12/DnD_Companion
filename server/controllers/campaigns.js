@@ -50,24 +50,8 @@ module.exports = {
         .then(campaign => {
             campaign.name = req.body.name
             campaign.player_count = req.body.player_count
-            campaign.dm = req.body.dm
             campaign.save()
-            .then(data => {
-                User.findOne({_id: req.params.id})
-                .then(user_update => {
-                    user_update.campaigns.push(data)
-                    user_update.save()
-                    .then(updated_data => res.json(updated_data))
-                    .catch(err => {
-                        console.log('Error when creating new user', err)
-                        res.json(err)
-                    })
-                })
-                .catch(err => {
-                    console.log('Error when creating new user', err)
-                    res.json(err)
-                })
-            })
+            .then(updated_data => res.json(updated_data))
             .catch(err => {
                 console.log('Error when creating new user', err)
                 res.json(err)
