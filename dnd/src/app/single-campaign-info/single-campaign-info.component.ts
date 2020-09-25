@@ -28,4 +28,10 @@ export class SingleCampaignInfoComponent implements OnInit {
       this.campaign = data
     })
   }
+  onSubmit(){
+    this._httpService.edit_campaign(this.campaign_id, this.campaign)
+    .subscribe(data => {
+      console.log('edited campaign', data)
+    })
+  }
 }
