@@ -36,4 +36,10 @@ export class HttpService {
     console.log('inside the http service', monster)
     return this._http.post(`/new_monster/${id}`, monster)
   }
+  show_campaigns(){
+    return this._http.get('/show_campaigns')
+  }
+  show_monsters(){
+    return this._http.get('/show_monsters')
+  }
 }

@@ -8,21 +8,6 @@
 <h3>Your Monsters:</h3>
 <div>
     <select>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
-        <option>monster name</option>
+        <option *ngFor = 'let monster of all_monsters'>{{monster.name}}</option>
     </select>
 </div>

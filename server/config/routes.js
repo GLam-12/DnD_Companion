@@ -42,8 +42,16 @@ module.exports = function(app, path){
         campaigns.add_campaign(req,res)
     })
     
+    app.get('/show_campaigns', (req,res) => {
+        campaigns.all_campaigns(req,res)
+    })
+
     app.post('/new_monster/:userid', (req,res) => {
         monsters.add_monster(req,res)
+    })
+
+    app.get('/show_monsters', (req,res) => {
+        monsters.all_monsters(req,res)
     })
     
     app.all('*', (req, res) =>{
