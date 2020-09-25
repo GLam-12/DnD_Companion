@@ -1,9 +1,9 @@
 <div class='cform'>
-    <form (submit)='onSubmit()'>
+    <form (submit)='onSubmit()' *ngIf='campaign'>
         <label for="name">Campaign Name:</label>
-        <input type="text" name="name"  required minlength="3"><br>
+        <input type="text" name="name"  required minlength="3" [(ngModel)]='campaign.name'><br>
         <label for="playerCount">Number of Characters in Campaign:</label>
-        <select name="playerCount" id="playerCount">
+        <select name="playerCount" id="playerCount" [(ngModel)]='campaign.player_count'>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>

@@ -77,5 +77,18 @@ module.exports = {
             console.log('Error when creating new user', err)
             res.json(err)
         })
-    }
+    },
+
+    one_campaign:(req, res) => {
+        Campaign.findOne({_id: req.params.id})
+        .then(campaign => {
+            console.log('Here is the one campaign', campaign)
+            res.json(campaign)
+        })
+        .catch(err => {
+            console.log('Error when showing a single campaigns', err)
+            res.json(err)
+        })
+    },
+
 }

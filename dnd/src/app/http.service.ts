@@ -39,6 +39,9 @@ export class HttpService {
   show_campaigns(){
     return this._http.get('/show_campaigns')
   }
+  get_campaign(id){
+    return this._http.get(`/get_campaign/${id}`)
+  }
   show_monsters(){
     return this._http.get('/show_monsters')
   }
