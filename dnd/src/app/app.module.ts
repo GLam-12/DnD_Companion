@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdModalComponent, NgbdModalContent } from './modal-component';
 import { StorageServiceModule} from 'angular-webstorage-service';
 
 import { HttpClientModule } from '@angular/common/http'
