@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'campaigns/new', component: CampFormPageComponent },
   {path: 'login_registration', component: LoginRegPageComponent},
   {path: 'player_page', component: PlayerPageComponent},
-  {path: 'character', component: CharPageComponent},
+  {path: 'character/:id', component: CharPageComponent},
   {path: 'create', component: CharFormPageComponent}
 ];
 

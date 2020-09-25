@@ -6,7 +6,7 @@
 
         <div *ngFor="let character of characters">
 
-            <p>{{character.name}}</p>
+            <a [routerLink]="['/character', character._id]">{{character.name}}</a>
 
         </div>
 
