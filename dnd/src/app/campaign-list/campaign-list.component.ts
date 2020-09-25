@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpService } from '../http.service'
 
 @Component({
   selector: 'app-campaign-list',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./campaign-list.component.scss']
 })
 export class CampaignListComponent implements OnInit {
-
-  constructor() { }
+  @Input() campaigns: any
+  constructor(private _httpService: HttpService) { }
 
   ngOnInit() {
   }
-
 }

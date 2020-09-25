@@ -3,6 +3,17 @@ const { User } = require('../models/user')
 
 
 module.exports = {
+    all_campaigns:(req, res)=>{
+        Campaign.find({}).sort({type: 'asc'})
+        .then(campaigns => {
+            console.log('Here are all the campaigns', campaigns)
+            res.json(campaigns)
+        })
+        .catch(err => {
+            console.log('Error when showing all users', err)
+            res.json(err)
+        })
+    },
     add_campaign:(req, res) => {
         console.log('req.body', req.body)
         console.log('params', req.params)
