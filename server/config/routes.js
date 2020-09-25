@@ -37,7 +37,10 @@ module.exports = function(app, path){
         chars.add_char(req,res)
     }) 
 
-    
+    app.get('/show_characters', (req,res) => {
+        chars.all_characters(req,res)
+    })
+
     app.post('/new_campaign/:userid', (req,res) => {
         campaigns.add_campaign(req,res)
     })

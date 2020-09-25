@@ -45,4 +45,7 @@ export class HttpService {
   show_monsters(){
     return this._http.get('/show_monsters')
   }
+  show_characters() {
+    return this._http.get('/show_characters')
+  }
 }

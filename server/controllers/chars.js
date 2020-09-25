@@ -4,6 +4,16 @@ const { User } = require('../models/user')
 
 module.exports = {
 
+    all_characters: (req,res) => {
+        Char.find({}).sort({type: 'asc'})
+        .then(all_characters => {
+            res.json(all_characters)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+    },
+
     add_char:(req, res) => {
         console.log('Here is the req.body', req.body)
         const char = new Char()
@@ -54,6 +64,7 @@ module.exports = {
             res.json(err)
         })
     },
+
 
     edit_char:(req, res)=> {
         // Need to figure out logic when other pieces are ready
